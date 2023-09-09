@@ -2,6 +2,11 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
+/**
+ * main - returns valule of n
+ *
+ * Return: 0 is success
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
