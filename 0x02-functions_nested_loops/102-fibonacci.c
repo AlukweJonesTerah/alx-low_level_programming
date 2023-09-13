@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	int i = 0;
-	long int k = 1, j = 0;
+	int i = 2;
+	long int k = 1, j = 2;
 	long int m;
 
 	printf("%lu, ", k);

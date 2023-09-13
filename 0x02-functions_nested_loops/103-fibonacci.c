@@ -7,14 +7,14 @@
 int main(void)
 {
 	int i;
-	int j = 1, k = 2, sum = 0;
+	int j = 0, k = 1, sum = 0;
 
-	for (; k < 4000000;)
+	for (i = 0; i < 4000000; i = j + k)
 	{
 		if (k % 2 == 0)
-			sum += k;
+			sum += i;
 
-		i = k;
+		j = k;
 		k += i;
 		i =  k;
 	}

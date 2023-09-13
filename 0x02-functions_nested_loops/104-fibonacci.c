@@ -8,29 +8,19 @@
 int main(void)
 {
 	int i;
-	unsigned long int a1, a2, a3;
-	unsigned long b1 = 0, b2 = 1, b3 = 0, b4 = 2;
+	float a = 1;
+	float b = a + 1;
+	float c = a + b;
 
-	printf("%lu, %lu, ", b2, b4);
+	printf("%.0f, %.0f, ", a, b);
 	for (i = 2; i < 98; i++)
 	{
-		if (b2 + b4 > LARGEST || b3 > 0 || b1 > 0)
+		if (i != 98)
 		{
-			a1 = (b2 + b4) / LARGEST;
-			a2 = (b2 + b4) % LARGEST;
-			a3 = b1 + b3 + a1;
-			b1 = b3, b3 = a3;
-			b2 = b4, b4 = a2;
-			printf("%lu%010lu", b3, b4);
-		}
-		else
-		{
-			a2 = b2 + b4;
-			b2 = b4, b4 = a2;
-			printf("%lu", b2);
-		}
-		if (i != 97)
 			printf(",");
+		}
+		a = b;
+		b = c;
 	}
 	printf("\n");
 	return (0);
