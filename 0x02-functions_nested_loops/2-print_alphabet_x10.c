@@ -1,19 +1,23 @@
-#include "main.h"
+#include"main.h"
+#include<ctype.h>
 /**
- * print_alphabet_x10 - print a to z 10 times
- */
+ * print_alphabet_x10 - prints alphabet in lowercase 10 times
+ *
+ * Description: prints alphabet 10 times
+ **/
 void print_alphabet_x10(void)
 {
-	int i = 'a';
-	int j = 0;
+	int j, i;
+	char ch[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	while (j < 10)
+	for (j = 0; j < 10; j++)
 	{
-		while (i <= 'z')
+		for (i = 0; ch[i] != '\0'; i++)
 		{
-			_putchar(i);
-			++i;
+			ch[i] = tolower(ch[i]);
+			_putchar (ch[i]);
 		}
-		i++;
+		_putchar ('\n');
 	}
 }
+

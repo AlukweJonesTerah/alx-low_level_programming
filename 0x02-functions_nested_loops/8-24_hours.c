@@ -1,37 +1,27 @@
 #include "main.h"
 /**
- * jack_bauer - Print every minute of the day of Jack Bauer
+ * jack_bauer - soung func
  *
  */
 void jack_bauer(void)
 {
-	int x;
-	int a = 0, b = 0, c = 0, d = 0;
+	int hour, h1, h2, min, m1, m2;
 
-	for (i = 0; i < 1440; i++)
+	for (hour = 0; hour <= 23; ++hour)
 	{
-		_putchar(a + '0');
-		_putchar(b + '0');
-		_putchar(':');
-		_putchar(c + '0');
-		_putchar(d + '0');
-		_putchar('\n');
-
-		d++;
-		if (d > 9)
+		h1 = hour / 10;
+		h2 = hour % 10;
+		for (min = 0; min < 60; ++min)
 		{
-			d = 0;
-			c++;
+			m1 = min / 10;
+			m2 = min % 10;
+			_putchar(h1 + '0');
+			_putchar(h2 + '0');
+			_putchar(':');
+			_putchar(m1 + '0');
+			_putchar(m2 + '0');
+			_putchar(10);
 		}
-		if (c > 5)
-		{
-			c = 0;
-			b++;
-		}
-		if (b > 9)
-		{
-			b = 0;
-			a++;
-		}
+		min = 0;
 	}
 }
