@@ -15,7 +15,7 @@ int main(void)
 			sum += i;
 
 		j = k;
-		i = a + b;
+		i = j + k;
 		k = i;
 	}
 	printf("%d\n", sum);
