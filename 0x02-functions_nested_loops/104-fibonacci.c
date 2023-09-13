@@ -1,23 +1,27 @@
-#include <stdio.h>
-#define LARGEST 10000000000
+#include<stdio.h>
 /**
- * main - prints the first 98 Fibonacci numbers, starting with 1 and 2.
- *
- * Return: 0 when success
+ * main - entry point.
+ * Description: returns the fibonacci of 100 series.
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int i;
+	int counter = 2;
+
 	float a = 1;
 	float b = a + 1;
 	float c = a + b;
 
-	printf("%.0f, %.0f, ", a, b);
-	for (i = 2; i < 98; i++)
+	printf("%.0f, ", a);
+	printf("%.0f, ", b);
+	while (counter < 98)
 	{
-		if (i != 98)
+		c = a + b;
+		printf("%.0f", c);
+		counter++;
+		if (counter != 98)
 		{
-			printf(",");
+			printf(", ");
 		}
 		a = b;
 		b = c;
