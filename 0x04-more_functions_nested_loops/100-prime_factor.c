@@ -1,24 +1,27 @@
 #include <stdio.h>
 #include <math.h>
 /**
- * main - prime numbers
+ * main - main funcion
  *
- * Return: 0 when success
+ * Return: end program
  */
 int main(void)
 {
-	long int i, j, k = 612852475143;
+	long int c, b, a = 612852475143;
 
-	while (i != 1)
+	while (a != 1)
 	{
-		for (j = 2; j <= i; j++)
+		for (b = 2; b <= a; ++b)
 		{
-			if (i % j == 0)
-			break;
+			if ((a % b) == 0)
+			{
+				break;
+			}
 		}
-		k = (i / j);
-		i = k;
+		c = (a / b);
+		a = c;
 	}
-	printf("%li\n", j);
+	printf("%li\n", b);
+
 	return (0);
 }
