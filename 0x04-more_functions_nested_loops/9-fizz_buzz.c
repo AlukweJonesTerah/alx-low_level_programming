@@ -1,24 +1,25 @@
 #include <stdio.h>
 /**
- * main - prints the numbers from 1 to 100, followed by a new line.
+ * main - main function
  *
- * Return: 0 when successful
+ * Return: end program
  */
 int main(void)
 {
-	int a = 1;
+	int n = 1;
 
-	while (a < 100)
+
+	while (n < 100)
 	{
-		if (a % 5 == 0 && a % 3 == 0)
-			printf("FizzBuzz");
-		else if (a % 5 == 0)
-			printf("Buzz");
-		else if (a % 3 == 0)
-			printf("Fizz");
+		if (n % 15 == 0)
+			printf("FizzBuzz ");
+		else if (n % 5 == 0)
+			printf("Buzz ");
+		else if (n % 3 == 0)
+			printf("Fizz ");
 		else
-			printf("%d", a);
-		a++;
+			printf("%d ", n);
+		n++;
 	}
 	printf("Buzz\n");
 	return (0);
