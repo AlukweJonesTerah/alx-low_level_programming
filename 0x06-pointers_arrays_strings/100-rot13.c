@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * string_toupper - a function that encodes a string using rot13
+ * rot13- a function that encodes a string using rot13
  *
  * @s: string to modify
  *
