@@ -1,1 +1,1 @@
-This is c programming handling Variables, if, else, while (loops and conditional statements
+0x0C. C - More malloc, free
