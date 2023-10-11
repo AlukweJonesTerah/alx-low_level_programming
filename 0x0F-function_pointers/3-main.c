@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int i;
 	int c;
 	int (*func)(int, int);
-	
+
 	i = atoi(argv[1]);
 	c = atoi(argv[3]);
 	func = get_op_func(argv[2]);

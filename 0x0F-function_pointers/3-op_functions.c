@@ -48,10 +48,7 @@ int op_div(int a, int b)
 		printf("Cannot divide by %d\n", b);
 		exit(100);
 	}
-	else
-	{
-		return ((a / b));
-	}
+	return ((a / b));
 }
 
 /**
