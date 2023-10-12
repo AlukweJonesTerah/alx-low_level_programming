@@ -2,27 +2,30 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * sum_them_all - a function that returns the sum of all its parameters.
- * @n: param showing start of args
- * Return: int
+ * sum_them_all - variadic prototype for sum
+ * @n: par
+ * @...: par
+ * Description: variadic prototype for sum
+ * Return: variadic sum
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int i, sum, x;
+	va_list vl;
+	unsigned int val;
+	unsigned int sum;
+	unsigned int i;
 
-	va_list args;
-	va_start(args, n);
-	i = n;
 	sum = 0;
-	if (n == 0)
-		return (0);
-	x = va_arg(args, int);
-	while (i > 0)
+	va_start(vl, n);
+	if (n > 0)
 	{
-		sum += x;
-		x = va_arg(args, int);
-		i--;
+		for (i = 0; i < n; i++)
+		{
+			val = va_arg(vl, unsigned int);
+			sum += val;
+		}
+		va_end(vl);
+		return (sum);
 	}
-	return (sum);
-	va_end(num);
+	return (0);
 }
