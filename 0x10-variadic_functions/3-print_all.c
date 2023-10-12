@@ -3,16 +3,16 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_all - a function that prints anything
- * @format: a list of types of arguments passed to the function
+ * print_all - function to print any type of arg
+ * @format: param
  */
 void print_all(const char *const format, ...)
 {
-	unsigned int i = 0, x;
+	unsigned int i = 0;
 	char *str, *sep;
 
-	va_list args;
-	va_start(args, format);
+	va_list(all);
+	va_start(all, format);
 	sep = "";
 	if (format != NULL)
 	{
@@ -21,18 +21,16 @@ void print_all(const char *const format, ...)
 			switch (format[i])
 			{
 			case 'c':
-				x = va_arg(args, int)
-				printf("%s%c", sep, x);
+				printf("%s%c", sep, va_arg(all, int));
 				break;
 			case 'i':
-				x = va_arg(args, int)
-				printf("%s%d", sep, x);
+				printf("%s%d", sep, va_arg(all, int));
 				break;
 			case 'f':
-				printf("%s%f", sep, va_arg(args, double));
+				printf("%s%f", sep, va_arg(all, double));
 				break;
 			case 's':
-				str = va_arg(args, char *);
+				str = va_arg(all, char *);
 				if (str == NULL)
 				{
 					printf("%s%s", sep, "(nil)");
@@ -49,5 +47,5 @@ void print_all(const char *const format, ...)
 		}
 		printf("\n");
 	}
-	va_end(args);
+	va_end(all);
 }
